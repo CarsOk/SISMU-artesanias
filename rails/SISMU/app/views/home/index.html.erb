@@ -2,35 +2,47 @@
   <div class="panelContador">
     <div class="panelContador__elemento">
       <div class="panelContador__icono">
-        <%= link_to "Más Infomación" %>
-        <span class="span_angulo_derecho"><%= image_tag "iconos/angulo_derecho", class: "minilogo_grid" %></span>
+        <span class="span_angulo_derecho">
+          <%= image_tag "iconos/canasta", class: "minilogo_gridi" %>
+        </span>
       </div>
-      Productos
+      <div class="panelContador__contador">
+        <span class="span_angulo_derecho">
+          <span>1</span>
+        </span>
+        <span>Productos</span>
+      </div>
     </div>
-    <div class="panelContador__elemento">
-      <div class="panelContador__icono">
-        <%= link_to "Más Infomación" %>
-        <span class="span_angulo_derecho"><%= image_tag "iconos/angulo_derecho", class: "minilogo_grid" %></span>
-      </div>
-      Categoria
-    </div>
-    <div class="panelContador__elemento">
-      <div class="panelContador__icono">
-        <%= link_to "Más Infomación" %>
-        <span class="span_angulo_derecho"><%= image_tag "iconos/angulo_derecho", class: "minilogo_grid" %></span>
-      </div>
-      Materia Prima
-    </div>
-    <div class="panelContador__elemento">
-      <div class="panelContador__icono">
-        <%= link_to "Más Infomación" %>
-        <span class="span_angulo_derecho"><%= image_tag "iconos/angulo_derecho", class: "minilogo_grid" %></span>
-      </div>
-      Pedidos
-    </div>  
-  </div>
-  
 
+    <div class="panelContador__elemento">
+      <div class="panelContador__icono">
+        <span class="span_angulo_derecho">
+          <%= image_tag "iconos/flor", class: "minilogo_grid" %>
+        </span>
+      </div>
+      <div class="panelContador__contador">
+        <span class="span_angulo_derecho">
+          <span>1</span>
+        </span>
+        <span>Categoria</span>
+      </div>
+    </div>
+
+    <div class="panelContador__elemento">
+      <div class="panelContador__icono">
+        <span class="span_angulo_derecho">
+          <%= image_tag "iconos/angulo_derecho", class: "minilogo_grid" %>
+        </span>
+      </div>
+      <div class="panelContador__contador">
+        <span class="span_angulo_derecho">
+          <span>1</span>
+        </span>
+        <span>Materia Prima</span>
+      </div>
+    </div>
+  </div>
+  <%# SEPARADOR %>
 
   <div class="panelRegistros">
     <div class="panelRegistros__elemento">
@@ -40,31 +52,19 @@
       Ultimás Ventas
     </div>
     <div class="panelRegistros__elemento">
-      <h2>Añadidos Recientemente</h2>
-      <div class="izq">
+      Añadidos Recientemente
       <table>
           <thead>
               <tr >
-                  <th class="odd" colspan="3 " >Nombre de los producto</th>
+                  <th class="odd" colspan="3">Nombre de los producto</th>
               </tr>
           </thead>
           <tbody>
+            <tr>
               <%= render @productos%>
+            </tr>
           </tbody>
       </table>
     </div> 
   </div>
-</main>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<main>
-  <div></div>
-
-  <div></div>
-
 </main>

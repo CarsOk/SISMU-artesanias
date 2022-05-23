@@ -1,15 +1,16 @@
+<main>
+  <div class="izq">
+      <table>
+          <thead>
+              <tr >
+                  <th class="odd" colspan="3 " >Nombre de los producto</th>
+              </tr>
+          </thead>
+          <tbody>
+              <%= render @productos%>
+          </tbody>
+      </table>
+  </div>
 
-<div class="izq">
-    <table>
-        <thead>
-            <tr >
-                <th class="odd" colspan="3 " >Nombre de los producto</th>
-            </tr>
-        </thead>
-        <tbody>
-            <%= render @productos%>
-        </tbody>
-    </table>
-</div>
-
-<a href="productos/new">Crear</a>
+  <a href="productos/new">Crear</a>
+</main>

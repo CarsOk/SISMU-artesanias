@@ -18,11 +18,21 @@
 /* ESTILOS GENERALES: APPLICATION */
 
 :root {
-  --width: 200px;
+  /* COLORES MODO DARK */
+  /* --width: 200px;
   --padding: 10px;
   --bgcolor: rgb(52, 52, 52);
   --hovercolor: rgb(23, 23, 23);
   --width-collapsed: 50px;
+  --color: #fff; */
+  /* COLORES MODO LIGHT */
+  --width: 200px;
+  --padding: 10px;
+  --bgcolor: rgb(235, 235, 235);
+  --hovercolor: rgb(172, 80, 5);
+  --width-collapsed: 50px;
+  --color: #ffa500;
+  --color-black: #000;
 }
 
 body {
@@ -36,6 +46,10 @@ body {
   margin-left: var(--width-collapsed);
 }
 
+main {
+  min-height: 518px;
+}
+
 /* BODY CON MENU LATERAL ABIERTO */
 
 .body-expanded {
@@ -44,7 +58,8 @@ body {
 
 #sidemenu {
   background-color: var(--bgcolor);
-  color: white;
+  border: 1px solid var(--hovercolor);
+  color: var(--color);
   position: fixed;
   height: 100%;
   left: 0;
@@ -52,7 +67,7 @@ body {
 }
 
 #sidemenu a {
-  color: white;
+  color: var(--color-black);
   text-decoration: none;
 }
 
@@ -61,6 +76,7 @@ body {
 
 nav {
   background-color: var(--bgcolor);
+  border: 1px solid var(--hovercolor);
   margin-top: -18px;
   height: 50px;
   display: flex;
@@ -76,7 +92,7 @@ nav {
 }
 
 #sismu__central {
-  color: #fff;
+  color: var(--color);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -110,7 +126,7 @@ nav {
 }
 
 #sidemenu #header_menu #menu_btn .btn_hamburguesa {
-  background-color: #fff;
+  background-color: #ffa500;
   width: 100%;
   height: 2px;
   margin: 5px 0;
@@ -120,6 +136,7 @@ nav {
 /* PERFIL_MENU LATERAL */
 
 #sidemenu #perfil_menu {
+  background-color: #fff;
   border-bottom: solid 1px var(--hovercolor);
   padding: var(--padding) 0;
   text-align: center;
@@ -135,6 +152,7 @@ nav {
 #sidemenu #perfil_menu #foto_menu img {
   width: 80%;
   border-radius: 10px;
+  border: 1px solid var(--hovercolor);
 }
 
 
@@ -236,6 +254,7 @@ nav {
   background-color: red;
   padding: 5px;
   border-radius: 5px;
+  border: 2px solid #000;
 }
 
 .salir {
@@ -246,11 +265,11 @@ nav {
 /* FOOTER */
 
 footer {
-  border: 1px solid var(--hovercolor);
+  border: 2px solid var(--hovercolor);
   background-color: var(--bgcolor);
   text-align: center;
 }
 
 footer p {
-  color: #fff;
+  color: var(--color);
 }

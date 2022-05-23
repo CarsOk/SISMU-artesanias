@@ -1,13 +1,13 @@
 <div>
-<h1>Productos</h1>
+  <h1>Productos</h1>
 
-<%= simple_form_for @producto do |f| %>
+  <%= simple_form_for @producto do |f| %>
 
-  <%= f.input :nombre_pro %>
-  <%= f.input :precio_pro %>
-  <%= f.button :submit %>
-  <%= f.file_field :avatar %>
-  <%= f.association :categories, as: :check_boxes, label_method: :tipo %>
-  <%= f.association :materials, as: :check_boxes, label_method: :tipo_material %>
-<% end %>
+    <%= f.input :nombre_pro %>
+    <%= f.input :precio_pro %>
+    <%= f.button :submit %>
+    <%= f.file_field :avatar %>
+    <%= f.association :categories, as: :check_boxes, label_method: :tipo %>
+    <%= f.association :materials, as: :check_boxes, label_method: :tipo_material %>
+  <% end %>
 </div>

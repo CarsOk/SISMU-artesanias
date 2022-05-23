@@ -2,6 +2,9 @@
   --fondo: rgba(255, 255, 255, 0.8);
   --borde: 1px solid rgba(0, 0, 0, 0.8);
 }
+/* main {
+  min-height: 520px;
+} */
 
 .panelContador,
 .panelRegistros {
@@ -18,15 +21,10 @@
   font-size: 30px;
   text-align: center;
   margin: 20px;
-  /* width: 300px; */
-  /* justify-content: space-around; */
-}
-
-.panelContador__icono {
-  width: 100%;
-  font-size: 15px;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  /* text-align: center; */
 }
 
 .panelRegistros__elemento {
@@ -36,14 +34,39 @@
   font-size: 30px;
   text-align: center;
   margin: 20px;
-  /* width: 300px; */
-  /* justify-content: space-around; */
+}
+
+.panelRegistros__elemento > table,thead,tbody,tr,td {
+  
+  border: 1px solid red;
+}
+
+.panelContador__icono {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  border: 1px solid purple;
+}
+.panelContador__contador {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  border: 1px solid purple;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .span_angulo_derecho {
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
+  border: 1px solid red;
 }
 
+.minilogo_gridi {
+  border: 1px solid red;
+  height: 60px;
+}
 .minilogo_grid {
-  height: 15px;
+  border: 1px solid red;
+  height: 60px;
 }
