@@ -1,13 +1,12 @@
 <div>
-<h1>Productos</h1>
+  <h1>Productos</h1>
 
 <%= simple_form_for @producto do |f| %>
   <%= f.input :referencia_pro,label: 'referencia: ' %>
   <%= f.input :nombre_pro,label: 'nombre del producto: ' %>
   <%= f.input :precio_pro, label: 'precio: ' %>
   <%= f.association :categories, label: 'Categoria:' , as: :check_boxes, label_method: :tipo_categoria %>
-  <%= f.button :submit %>
-  
+  <%= f.button :submit %> 
   
 <% end %>
 </div>

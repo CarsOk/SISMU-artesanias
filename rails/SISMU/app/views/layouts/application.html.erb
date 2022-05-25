@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "devise", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "index", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= javascript_importmap_tags "reload" %>
   </head>
 
   <body>
@@ -19,7 +19,7 @@
     <%# NAV %>
     <nav>
       <section>
-        <%= link_to image_tag( "minilogo_lateral_sandra_munoz_artesanias", class: "logo"), root_path %>
+        <%= link_to image_tag("logo_lateral_sandra_munoz", class: "logo"), root_path %>
       </section>
       <section>
         <span id="sismu__central">SISMU <i>Artesanías</i></span>
@@ -34,7 +34,7 @@
     <div id="sidemenu" class="menu_collapsed">
       <%# CABECERA_MENU %>
       <div id="header_menu">
-        <div id="title_menu"><div>SISMU</div></div>
+        <div id="title_menu">SISMU</div>
         <div id="menu_btn">
           <div class="btn_hamburguesa"></div>
           <div class="btn_hamburguesa"></div>
@@ -42,39 +42,54 @@
         </div>
       </div>
       <%# LOGO SISMU %>
-      <div id="perfil_menu">
-        <div id="foto_menu"><%=link_to  image_tag("minilogo_sismu"), root_path  %></div>
+      <div id="perfil_menu" title="SISMU">
+        <div id="foto_menu">
+          <%=link_to image_tag("logo_completo_sandra_munoz"), root_path %>
+        </div>
       </div>
       <%# ITEMS_MENU %>
       <div id="menu_items">
-        <div class="item_menu">
-          <div>
-            <%= link_to image_tag("iconos/canasta", class: "icon_menu" ), productos_url%>
-            
-          </div>
-          
+        <div class="item_menu" title="Productos">
+            <%= link_to productos_url do %>
+              <%= image_tag("iconos/canasta", class: "icon_menu") %> 
+              <div class="title_icon_menu"><span>Productos</span></div>
+            <% end %>
         </div>
-        <div class="item_menu">
-          <div><%= link_to image_tag("iconos/flor", class:"icon_menu" ), facturas_url %></div>
+
+        <div class="item_menu" title="Materiales">
+          <%= link_to materials_url do %>
+            <%= image_tag("iconos/flor", class:"icon_menu") %>
+            <div class="title_icon_menu"><span>Materiales</span></div>
+          <% end %>
         </div>
         
-        <div class="item_menu">
-          <div><%= link_to image_tag("iconos/usuarios", class:"icon_menu" ), clients_url %></div>
+        <div class="item_menu" title="Clientes">
+          <%= link_to "#" do %>
+            <%= image_tag("iconos/usuarios", class: "icon_menu") %>
+            <div class="title_icon_menu"><span>Clientes</span></div>
+          <% end %>
         </div>
+
         <%# SEPARADOR MENU %>
         <div class="item_menu separador_menu"></div>
-        <div class="item_menu">
-          <a href="#">
-            <div class="icon_menu"><%= image_tag "iconos/ajustes_outline" %></div>
+        <%# ---- %>
+
+        <div class="item_menu" title="Ajustes">
+          <%= link_to "#" do %>
+            <%= image_tag("iconos/ajustes_outline", class: "icon_menu") %>
             <div class="title_icon_menu"><span>Ajustes</span></div>
-          </a>
+          <% end %>
         </div>
+
+        <%# SEPARADOR MENU %>
         <div class="item_menu separador_menu"></div>
-        <div class="item_menu">
-          <a href="#">
-            <div class="icon_menu"><%= image_tag "iconos/info" %></div>
+        <%# ---- %>
+
+        <div class="item_menu" title="Información">
+          <%= link_to "#" do %>
+            <%= image_tag("iconos/info", class:"icon_menu") %>
             <div class="title_icon_menu"><span>Información</span></div>
-          </a>
+          <% end %>
         </div>
       </div>
     </div>
